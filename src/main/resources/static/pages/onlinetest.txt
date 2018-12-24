@@ -1,0 +1,86 @@
+create table student(
+sid char(12) primary key not null,
+sname varchar(32),
+gender varchar(10),
+birthday date,
+email varchar(50),
+class varchar(10),
+password varchar(32)
+)
+
+create table teacher(
+tid char(12) primary key not null,
+tname varchar(32),
+gender varchar(10),
+birthday date,
+email varchar(50),
+class varchar(10),
+password varchar(32)
+)
+
+create table questionbank(
+qno int primary key not null,
+choiceA varchar(200),
+choiceB varchar(200),
+choiceC varchar(200),
+choiceD varchar(200),
+correct char(1),
+value int,
+course varchar(10)
+)
+
+create table test(
+code int primary key not null,
+sid char(12),
+courseName varchar(32),
+applyDate date,
+testDate date,
+status varchar(20),
+score int
+)
+
+create table course(
+cid char(4) primary key not null,
+cname varchar(32),
+module varchar(32),
+registered_time int,
+profile varchar(500)
+)
+
+create table course_register(
+code int primary key not null,
+sid char(12),
+coursename varchar(12),
+status varchar(20)
+)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
